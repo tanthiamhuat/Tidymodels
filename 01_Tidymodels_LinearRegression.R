@@ -5,6 +5,8 @@ if (dev.cur()!=1) {dev.off()} # clear R plots if exists
 library(tidymodels)
 data(ames)
 ames <- mutate(ames, Sale_Price = log10(Sale_Price))
+# For simple transformations of the outcome column(s), 
+# we strongly suggest that those operations be conducted outside of the recipe.
 
 set.seed(123)
 ames_split <- initial_split(ames, prop = 0.80, strata = Sale_Price)
