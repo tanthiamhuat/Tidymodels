@@ -1,4 +1,5 @@
 # https://www.rebeccabarter.com/blog/2020-03-25_machine_learning/
+# https://towardsdatascience.com/modelling-binary-logistic-regression-using-tidymodels-library-in-r-part-1-c1bdce0ac055
 
 rm(list=ls())  # remove all variables
 cat("\014")    # clear Console
@@ -27,6 +28,11 @@ diabetes_clean <- diabetes_orig %>%
                           false = .var # otherwise leave it as it is
                   )
               })
+
+levels(diabetes_clean$diabetes)
+
+diabetes_clean$diabetes <- relevel(diabetes_clean$diabetes, ref = "pos")
+levels(diabetes_clean$diabetes)
 
 set.seed(234589)
 # split the data into trainng (75%) and testing (25%)
@@ -107,10 +113,10 @@ conf_mat(diabetes_results, truth = diabetes,
 accuracy(diabetes_results, truth = diabetes,
          estimate = .pred_class)
 
-roc_auc(diabetes_results, truth = diabetes, .pred_neg)
+roc_auc(diabetes_results, truth = diabetes, .pred_pos)
 
 diabetes_results %>%
-    roc_curve(truth = diabetes, .pred_neg) %>%
+    roc_curve(truth = diabetes, .pred_pos) %>%
     autoplot()
 
 # set the workflow
@@ -120,7 +126,7 @@ rf_workflow <- workflow() %>%
     # add the model
     add_model(rf_model)
 
-# specify which values eant to try
+# specify which values we want to try
 rf_grid <- expand.grid(mtry = c(3, 4, 5))
 # extract results
 rf_tune_results <- rf_workflow %>%
