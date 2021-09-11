@@ -9,3 +9,5 @@ This Tidymodels directory contain different R codes using Tidymodels, whether fo
 02c_Tidymodels_Classification_Telco.R uses Telco dataset to predict Customer Churn (Classification). Use Generalized Linear Model (GLM) Logistic Regression and Random Forest algorithms.
 
 02d_Tidymodels_Classification_Titanic.R uses Titanic dataset to predict survival of passengers (Classification). Use xgboost, random forest, catboost, Neural networks, Support vector machines, Decision trees, Stacked ensemble modelling algorithms.
+
+02e_Tidymodels_Classification_Bird.R uses Bird dataset to predict the probability of seeing a bird (Classification).
