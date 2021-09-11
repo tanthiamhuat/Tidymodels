@@ -11,3 +11,8 @@ This Tidymodels directory contain different R codes using Tidymodels, whether fo
 02d_Tidymodels_Classification_Titanic.R uses Titanic dataset to predict survival of passengers (Classification). Use xgboost, random forest, catboost, Neural networks, Support vector machines, Decision trees, Stacked ensemble modelling algorithms.
 
 02e_Tidymodels_Classification_Bird.R uses Bird dataset to predict the probability of seeing a bird (Classification). Interaction terms were included in the recipe with step_interact() which helps to improve its AUC for its ROC.
+
+A Free, Interactive Course Using Tidy Tools, from Julia Silge, data scientist and software engineer at RStudio:
+Chapter 1: Not mtcars AGAIN
+Chapter 2: Stack Overflow Developer Survey
+Chapter 4: But what do the nuns think?
