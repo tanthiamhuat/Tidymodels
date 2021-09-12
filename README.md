@@ -18,4 +18,6 @@ Chapter 1: Not mtcars AGAIN
 
 Chapter 2: Stack Overflow Developer Survey
 
+Chapter 3: Get out the Vote
+
 Chapter 4: But what do the nuns think?
