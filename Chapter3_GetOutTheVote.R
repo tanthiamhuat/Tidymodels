@@ -139,6 +139,7 @@ vote_wf <- workflow() %>%
     add_model(glm_spec)
 
 ## Final fit
+# last_fit() function to fit to the entire training set one time and evaluate one time on the testing set
 vote_final <- vote_wf %>%
     last_fit(vote_split)
 
