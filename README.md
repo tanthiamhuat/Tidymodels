@@ -12,6 +12,8 @@ This Tidymodels directory contain different R codes using Tidymodels, whether fo
 
 02e_Tidymodels_Classification_Bird.R uses Bird dataset to predict the probability of seeing a bird (Classification). Interaction terms were included in the recipe with step_interact() which helps to improve its AUC for its ROC.
 
+02f_Tidymodels_Classification_Resampling.R uses College data to predict which US colleges have higher proportions of minority students. Use Generalized Linear Model (GLM) Logistic Regression, Nearest Neighbor and Decision Tree algorithms. 
+
 [A Free, Interactive Course Using Tidy Tools](https://supervised-ml-course.netlify.app/), from Julia Silge, data scientist and software engineer at RStudio:
 
 Chapter 1: Not mtcars AGAIN
